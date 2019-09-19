@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script>
+    function save(){
+		var chk;
+		chk = confirm('저장?');
+		if(chk == true){
+			document.f1.data1.value = '저장 진행...';
+		}else {
+			document.f1.data1.value = '저장 취소...';
+		}
+    }
+
+</script>
+</head>
+<body>
+	<form action="save.jsp" name="f1">
+		<input type="text" value="" name="data1"> <br> 
+		<input type="button" value="저장" onclick="save()">
+	</form>
+</body>
+</html>
