@@ -10,6 +10,14 @@
       "request": "launch",
       "port": 9209,
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Chrome localhost (8)",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:8080/javascript/numFunc.html"
     }
   ]
 }
