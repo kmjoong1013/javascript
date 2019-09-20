@@ -13,10 +13,17 @@
  */
 	
 	function plusResult() {
-		var a = 0, b = 0;
-		result = a+b;
-		document.getElementsByName()
-	}
+		alert (isNaN(document.f1.a.value));
+		if(isNaN(document.f1.a.value)){
+			alert('a를 다시 입력하세요');
+			return;
+		}
+		if(isNaN(document.f1.b.value)){
+			alert('b를 다시 입력하세요');
+			return;
+		}
+		var result = parseInt(document.f1.a.value) + parseInt(document.f1.b.value);
+		document.f1.result.value = result;
 </script>
 </head>
 <body>

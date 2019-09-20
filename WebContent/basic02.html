@@ -14,9 +14,15 @@
 
 	var result = (a>b) ? 'a가 크다' : 'b가 크다';
 	document.write("result : " + result);
+
+	function cls() {
+		document.open();
+		document.clear();
+		document.close();
+	}
 </script>
 </head>
 <body>
-
+	<input type="button" onclick="cls()" value="cls">
 </body>
 </html>

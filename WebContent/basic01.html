@@ -9,11 +9,13 @@
 <script src="./basic01.js" type="text/javascript"></script>
 <script>
 	function prn() {
-		alert ("javascript");
+		//alert ("javascript");
+		var win = window.open('','popup','width=200, height=400');
+		win.document.write('child window');
 	}
 </script>
 </head>
-<input type="button" onclick="externprn()" value="javascript버튼">
+<input type="button" onclick="prn()" value="javascript버튼">
 <body>
 
 </body>
