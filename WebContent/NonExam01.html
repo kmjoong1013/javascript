@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function convDay(dayNum){
+		switch(dayNum){
+		case 0 : 
+			strDay = "일요일"; break;
+		case 1 : 
+			strDay = "월요일"; break;
+		case 2 : 
+			strDay = "화요일"; break;
+		case 3 : 
+			strDay = "수요일"; break;
+		case 4 : 
+			strDay = "목요일"; break;
+		case 5 : 
+			strDay = "금요일"; break;
+		case 6 : 
+			strDay = "토요일";break;
+		}
+		return strDay;
+	}
+	// 오늘 날짜를 yyyy-mm-dd형태로  출력하고 요일도 한글로  출력하세요
+	var now = new Date();
+	
+	var y = now.getFullYear();
+	var m = now.getMonth() + 1;
+	var d = now.getDate();
+	
+	var dayNum = now.getDay();
+	
+	document.write(y+'-'+m+'-'+d+' ' + convDay(dayNum));
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

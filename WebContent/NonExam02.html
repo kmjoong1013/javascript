@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function memReg() {
+		var emailObj = document.frm1.email;
+		if (emailObj.value == '') {
+			alert('이메일을 넣어주세요');
+			emailObj.focus();
+			return;
+		}
+		if (emailObj.value.indexOf('@') == -1) {
+			alert('이메일을 정학히 넣어주세요');
+			emailObj.focus();
+			return;
+		}
+	}
+</script>
+</head>
+<body>
+	<form method="post" action="memRegProc.jsp" name="frm1">
+	<table border="1" cellspacing="0" width="500">
+		<tr>
+			<td colspan="2" align="center" bgcolor="pink">회원가입</td>
+		</tr>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" value="" name="id">
+			    <input type="button" value="중복확인">
+			</td>
+		</tr>
+		<tr>
+			<td>암호</td>
+			<td><input type="password" name="pw"></td>
+		</tr>	
+		<tr>
+			<td>이름</td>
+			<td><input type="text" name="name"></td>
+		</tr>		
+		<tr>
+			<td>이메일</td>
+			<td><input type="text" name="email"></td>
+		</tr>		
+	</table>
+	</form>
+	<input type="button" name="" id="" onclick="memReg">
+</body>
+</html>
