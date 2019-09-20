@@ -5,18 +5,21 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
-	function memReg() {
+	function memReg(){
 		var emailObj = document.frm1.email;
-		if (emailObj.value == '') {
+		if(emailObj.value == ''){
 			alert('이메일을 넣어주세요');
 			emailObj.focus();
 			return;
 		}
-		if (emailObj.value.indexOf('@') == -1) {
-			alert('이메일을 정학히 넣어주세요');
+		if(emailObj.value.indexOf('@') == -1){
+			alert('이메일을 정확히 넣어주세요');
 			emailObj.focus();
 			return;
 		}
+		
+
+		
 	}
 </script>
 </head>
@@ -46,6 +49,6 @@
 		</tr>		
 	</table>
 	</form>
-	<input type="button" name="" value="회원가입" onclick="memReg">
+	<input type="button" value="회원가입" onclick="memReg()">
 </body>
 </html>
