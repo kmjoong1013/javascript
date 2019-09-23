@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function chgCombo() {
+		var jobObj = f1.job;
+		var selectedIdx = jobObj.selectedIndex;
+		// if (selectIdx == 0) {
+			
+		// }
+		f1.jobValue.value = jobObj.options[selectedIdx].value;
+	}
+</script>
+</head>
+<body>
+<form name="f1">
+	직업<select name="job" id="job" onchange="chgCombo()">
+		<option value="선택">--선택--</option>
+		<option value="군인">군인</option>
+		<option value="회사원">회사원</option>
+		<option value="공무원">공무원</option>
+		<option value="교사">교사</option>
+	</select> <br>
+	선택한 직업 : <input type="text" name="jobValue" value="">
+	<input type="button" value="결과" onclick="proc()"/><br/>
+</form>
+</body>
+</html>
