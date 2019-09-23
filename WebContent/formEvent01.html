@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function dataCheck() {
+		var nameObj = f1.name;
+
+		if (nameObj.value =='') {
+			alert("이름을 입력하세요.");
+			nameObj.focus(); //이름으로 포커스가 맞춰짐
+			return false;
+		}
+
+		return true;
+	}
+</script>
+</head>
+<body>
+<form name="f1" action="save.jsp" method="get" onsubmit="return dataCheck()">
+	이름 : <input type="text" name="name" value=""><br/>
+	<input type="submit" value="저장">
+</form>
+</body>
+</html>
