@@ -16,6 +16,10 @@
     pop.style.left = event.pageX+'px';
     pop.style.top = event.pageY+'px';
   }
+  function popupClose() {
+    var pop = document.getElementById("div");
+    pop.style.display = 'none';
+  }
 </script>
 <style>
   #div{
@@ -27,6 +31,7 @@
 </head>
 <body onmousedown="movePop(event)">
 <div id="div">
+  <div onclick="popupClose()">x </div>
   1. 취업을 위하여 <br/>
   2. 수업시간에 열심히 <br/>
   3. 화이팅!
