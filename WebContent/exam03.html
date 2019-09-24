@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+   onmousedown 
+   div객체.style.left = x좌표
+   div객체.style.top = y좌표 
+   위에 내용을 참고해서 div로 만든 팝업창이 마우스를 클릭할 때 마다 마우스 포인터로 
+   이동하게 하시오 .
+ */
+  function movePop(event) {
+    var pop = document.getElementById("div");
+    pop.style.left = event.pageX+'px';
+    pop.style.top = event.pageY+'px';
+  }
+</script>
+<style>
+  #div{
+    background-color: gray; width: 200px; height: 80px; padding: 30px 20px 20px 30px;
+    display: block; border: 2px dotted black; position: absolute;
+  }
+  body {width: 1024px;height: 768px;}
+</style>
+</head>
+<body onmousedown="movePop(event)">
+<div id="div">
+  1. 취업을 위하여 <br/>
+  2. 수업시간에 열심히 <br/>
+  3. 화이팅!
+</div>
+</body>
+</html>
