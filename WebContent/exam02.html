@@ -5,52 +5,53 @@
 <title>Insert title here</title>
 <script>
 function chk() {
-	var id = f1.id;
-	if (id.value == '' || !(id.value.length >=8 && id.value.length <= 16)) {
-		alert("아이디를 확인해주세요.");
-		id.focus();
+	var idObj = document.f1.id;
+	if (idObj.value == '' ) {
+		alert("아이디를 확인해주세요.")
+		idObj.focus();
 		return false;
 	}
-	var pw = f1.pw;
-	if (pw.value == '') {
+	var pwObj = document.f1.pw;
+	if (pwObj.value == '') {
 		alert("비밀번호를 입력하지 않았습니다.")
-		pw.focus();
+		pwObj.focus();
 		return false;
 	}
-	if (pw.value != chkPw.value) {
-		alert("비밀번호가 일치하지 않습니다")
+	var chkPwObj = document.f1.chkPw;
+	if (pwObj.value != chkPw.value) {
+		alert("비밀번호가 일치하지 않습니다.")
 		chkPw.focus();
 		return false;
 	}
-	var name = f1.name;
-	if (name.value == '') {
+	var nameObj = document.f1.name;
+	if (nameObj.value == '') {
 		alert("이름을 입력해주세요.");
-		name.focus();
+		nameObj.focus();
 		return false;
 	}
-	var email = f1.email;
-	if (email.value == '') {
+	var emailObj = document.f1.email;
+	if (emailObj.value == '') {
 		alert("이메일을 확인해주세요.");
-		email.focus();
+		emailObj.focus();
 		return false;
 	}
-	var tel = f1.tel;
-	if (tel.value == '') {
+	var telObj = document.f1.tel;
+	if (telObj.value == '') {
 		alert("전화번호를 확인해주세요.");
-		tel.focus();
+		telObj.focus();
 		return false;
 	}
-	var job = f1.job;
-	if (job.checked == false) {
+	var jobObj = document.f1.job;
+	if (jobObj.checked == "선택") {
 		alert("직업을 선택해주세요.");
-		job.focus();
+		jobObj.focus();
 		return false;
 	}
-	var m = f1.m;
-	var f = f1.f;
-	if (m.checked == false && f.checked == false) {
+	var mObj = document.f1.m;
+	var fObj = f1.f;
+	if (mObj.checked == false && fObj.checked == false) {
 		alert("성별을 선택해주세요.");
-		m.focus();
+		mObj.focus();
 		return false;
 	}
 }
@@ -77,8 +78,9 @@ function chk() {
 		</tr>
 		<tr>
 			<td>아이디</td>
-			<td><input type="text" value="" name="Id" id="Id">
-			    <input type="button" value="중복확인">
+			<td><input type="text" value="" name="Id" id="id" minlength="8" 
+				maxlength="16" pattern="{8,16}$">
+				<input type="button" value="중복확인">
 			</td>
 		</tr>
 		<tr>

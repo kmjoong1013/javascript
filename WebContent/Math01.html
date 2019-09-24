@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function msg() {
+		var cnt = 125;
+		var pageRow = 10;
+
+		list = cnt / pageRow;
+		list1 = Math.floor(cnt / pageRow);
+		list2 = Math.ceil(cnt / pageRow);
+		list3 = Math.round(cnt / pageRow);
+
+		alert(list1);
+		alert(list2);
+		alert(list3);
+	}
+</script>
+</head>
+<body>
+<form name="f1">
+	<p><input type="button" name="btn" value="math" onclick="msg()"></p>
+</form>
+</body>
+</html>
